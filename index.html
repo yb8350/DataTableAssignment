@@ -4,20 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+  <link rel="stylesheet" href="main.css">
   <title>셔틀버스 시간표 : (주)월드트레블</title>
 </head>
 <body>
   <table>
-    <caption></caption>
+    <caption>운행 중인 셔틀버스</caption>
+
     <thead>
       <tr>
         <th scope="col" rowspan="2">지역</th>
         <th scope="col" rowspan="2">출발장소</th>
-        <th scope="col" rowspan="2">지도</th>
         <th scope="col" colspan="2">왕복요금(원)</th>
         <th scope="col" colspan="2">출발시간</th>
-        <th scope="col" rowspan="2">소요시간(약/분)</th>
-        <th scope="col" rowspan="2">운행여부</th>
+        <th scope="col" rowspan="2">소요시간<br>(약/분)</th>
       </tr>
       <tr>
         <th scope="col">대인</th>
@@ -26,13 +27,115 @@
         <th scope="col">에버랜드</th>
       </tr>
     </thead>
+
     <tbody>
+      <!-- 서울 -->
       <tr>
-        <th scope="row" >서울</th>
-        <td>신논현역 6번출구, 플랫폼 앞</td>
+        <th scope="row" rowspan="4">서울</th>
         <td>
-          <a href="http://www.worldbus.co.kr/images/map/04_Sinnonhyeon.jpg" onclick="window.open(this.href, '_blank', 'width=800, height=600'); return false;">aa</a>
+          <a href="http://www.worldbus.co.kr/images/map/06_Yeongdeungpo.jpg" onclick="window.open(this.href, '_blank', 'width=800, height=600'); return false;">
+            영등포 타임스퀘어 (소방서 건너편)
+          </a>
         </td>
+        <td rowspan="2">13,000</td>
+        <td rowspan="2">12,000</td>
+        <td>8:40</td>
+        <td rowspan="4">19:10</td>
+        <td rowspan="2">60</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://www.worldbus.co.kr/images/map/07_Sindorim.jpg" onclick="window.open(this.href, '_blank', 'width=800, height=600'); return false;">
+            신도림역 홈플러스 (푸르지오 상가)
+          </a>
+        </td>
+        <td>8:50</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://www.worldbus.co.kr/images/map/04_Sinnonhyeon.jpg" onclick="window.open(this.href, '_blank', 'width=800, height=600'); return false;">
+            신논현역 6번출구, 플랫폼 앞
+          </a>
+        </td>
+        <td rowspan="2">10,000</td>
+        <td rowspan="2">9,000</td>
+        <td>9:25</td>
+        <td rowspan="2">40</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://www.worldbus.co.kr/images/map/05_Gangnam.jpg" onclick="window.open(this.href, '_blank', 'width=800, height=600'); return false;">
+            강남역 6번출구, 플랫폼 앞
+          </a>
+        </td>
+        <td>9:30</td>
+      </tr>
+
+      <!-- 인천 -->
+      <tr>
+        <th scope="row" rowspan="2">인천</th>
+        <td>
+          <a href="https://map.kakao.com/?panoid=1047572764&pan=271.7&tilt=-1.0&zoom=-3&map_type=type_map&map_attribute=roadview&q=%EC%9D%B8%EC%B2%9C%ED%84%B0%EB%AF%B8%EB%84%90+1%EB%B2%88+%EC%B6%9C%EA%B5%AC+&urlx=433630&urly=1095324&urllevel=3" onclick="window.open(this.href, '_blank', 'width=800, height=600'); return false;">
+            인천터미널역 1번 출구
+          </a>
+        </td>
+        <td rowspan="2">13,000</td>
+        <td rowspan="2">12,000</td>
+        <td rowspan="2">8:40</td>
+        <td rowspan="2">19:10</td>
+        <td rowspan="2">60</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="http://www.worldbus.co.kr/images/map/09_Bupyeong.jpg" onclick="window.open(this.href, '_blank', 'width=800, height=600'); return false;">
+            부평역 역사쇼핑몰 정문
+          </a>
+        </td>
+      </tr>
+
+      <!-- 수원 -->
+      <tr>
+        <th scope="row">수원</th>
+        <td>
+          <a href="http://www.worldbus.co.kr/images/map/01_Suwon.jpg" onclick="window.open(this.href, '_blank', 'width=800, height=600'); return false;">
+            수원역 AK프라자 버스정류장<br>(매산지구대 옆)
+          </a>
+        </td>
+        <td>8,000</td>
+        <td>7,000</td>
+        <td>09:00~12:00</td>
+        <td>17:00~20:00</td>
+        <td>35~40</td>
+      </tr>
+
+      <!-- 안산 -->
+      <tr>
+        <th scope="row">안산</th>
+        <td>
+          <a href="https://map.kakao.com/?panoid=1035092678&pan=184.0&tilt=4.0&zoom=-2&map_type=type_skyview&map_hybrid=true&map_attribute=roadview&urlx=469955&urly=1056472&urllevel=3" onclick="window.open(this.href, '_blank', 'width=800, height=600'); return false;">
+            상록수역 롯데리아
+          </a>
+        </td>
+        <td>11,000</td>
+        <td>10,000</td>
+        <td>08:40</td>
+        <td>19:00</td>
+        <td>60</td>
+      </tr>
+
+       <!-- 천안 -->
+      <tr>
+        <th scope="row">천안</th>
+        <td>
+          <a href="http://www.worldbus.co.kr/images/map/01_Suwon.jpg" onclick="window.open(this.href, '_blank', 'width=800, height=600'); return false;">
+            신세계백화점 정문 앞
+          </a>
+        </td>
+        <td>14,000</td>
+        <td>13,000</td>
+        <td>09:00</td>
+        <td>19:10</td>
+        <td>60</td>
       </tr>
     </tbody>
   </table>
