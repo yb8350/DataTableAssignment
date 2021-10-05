@@ -68,3 +68,7 @@ td {
   text-align: center;
   vertical-align: middle;
 }
+
+.last {
+  border-bottom: 2px solid black;
+}
